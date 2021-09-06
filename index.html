@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0 ;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #c7b8b8;
+        }
+        nav ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li{
+            --c:#132143;
+            color: var(--c);
+            width: 12em;
+            height: 3em;
+            border: 0.3em solid var(--c);
+            text-align: center;
+            line-height: 3em;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            letter-spacing: 0.1em;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transform: 0.5s;
+            margin: 1em;
+            font-size: 33px;
+            
+        }
+        nav ul li:hover{
+            color: #c7b8b8;
+        }
+
+        nav ul li span{
+            position: absolute;
+            width: 25%;
+            height: 100%;
+            background-color: var(--c);
+            transform: translateY(150%);
+            border-radius: 50%;
+            left: calc((var(--n) - 1) * 25%);
+            transform: 0.5s;
+            transition-delay: calc((var(--n) - 1) * 0.1s);
+            z-index: -1;
+            
+        }
+
+        nav ul li:hover span{
+            transform: translateY(0) scale(2.5);
+        }
+
+        nav ul li span:nth-child(1){
+            --n: 1;
+        }
+        nav ul li span:nth-child(2){
+            --n: 2;
+        }
+        nav ul li span:nth-child(3){
+            --n: 3;
+        }
+        nav ul li span:nth-child(4){
+            --n: 4;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <a href="pdf/Menu P.pdf"><li>
+                Menu Pranzo
+                <span></span><span></span><span></span><span></span>
+            </li></a>
+            <a href="pdf/Menu C.pdf"><li>
+                Menu Cena
+                <span></span><span></span><span></span><span></span>
+            </li></a>
+            
+        </ul>
+    </nav>
+</body>
+</html>
